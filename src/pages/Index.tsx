@@ -1,7 +1,6 @@
 import HeroSection from "@/components/landing/HeroSection";
 import BenefitsSection from "@/components/landing/BenefitsSection";
 import FreeBonusSection from "@/components/landing/FreeBonusSection";
-import TestimonialsSection from "@/components/landing/TestimonialsSection";
 import HowItWorksSection from "@/components/landing/HowItWorksSection";
 import AuthoritySection from "@/components/landing/AuthoritySection";
 import FinalCTASection from "@/components/landing/FinalCTASection";
@@ -15,7 +14,6 @@ const Index = () => {
       <HeroSection />
       <BenefitsSection />
       <FreeBonusSection />
-      <TestimonialsSection />
       <HowItWorksSection />
       <AuthoritySection />
       <FinalCTASection />

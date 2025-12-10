@@ -25,19 +25,19 @@ const AuthoritySection = () => {
               </p>
               
               <p className="text-muted-foreground leading-relaxed">
-                Já ajudamos dezenas de salões a conquistarem presença digital de verdade, 
-                com resultados reais e mensuráveis. Nossa missão é fazer seu salão brilhar online 
-                tanto quanto brilha no atendimento presencial.
+                Nossa missão é fazer seu salão brilhar online tanto quanto brilha no atendimento presencial. 
+                Por isso criamos este pacote especial para os <span className="font-semibold text-gold">10 primeiros salões</span> que 
+                acreditarem no nosso trabalho.
               </p>
 
               <div className="flex flex-wrap gap-4 pt-4">
                 <div className="flex items-center gap-2 text-foreground">
                   <Sparkles className="w-5 h-5 text-gold" />
-                  <span className="text-sm font-medium">+50 salões atendidos</span>
+                  <span className="text-sm font-medium">Pacote exclusivo</span>
                 </div>
                 <div className="flex items-center gap-2 text-foreground">
                   <Heart className="w-5 h-5 text-primary" />
-                  <span className="text-sm font-medium">98% de satisfação</span>
+                  <span className="text-sm font-medium">Atendimento personalizado</span>
                 </div>
               </div>
             </div>
