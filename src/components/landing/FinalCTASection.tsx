@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Gift, Check } from "lucide-react";
-import CountdownTimer from "./CountdownTimer";
+import { MessageCircle, Gift, Check, Users } from "lucide-react";
 
 const FinalCTASection = () => {
+  const spotsLeft = 10;
   const whatsappLink = "https://wa.me/5500000000000?text=Olá! Quero saber mais sobre o pacote completo para salões 💇‍♀️";
 
   const bonusList = [
@@ -22,8 +22,8 @@ const FinalCTASection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-gold/20 border border-gold/40 px-5 py-2 rounded-full mb-8 animate-pulse-soft">
-            <Gift className="w-5 h-5 text-gold" />
-            <span className="text-gold font-semibold">Última chance de garantir sua oferta</span>
+            <Users className="w-5 h-5 text-gold" />
+            <span className="text-gold font-semibold">Apenas {spotsLeft} vagas disponíveis!</span>
           </div>
 
           <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
@@ -54,9 +54,11 @@ const FinalCTASection = () => {
             </ul>
           </div>
 
-          {/* Countdown */}
-          <div className="mb-10">
-            <CountdownTimer />
+          {/* Spots indicator */}
+          <div className="mb-10 bg-card/60 backdrop-blur-sm border border-gold/30 rounded-xl px-6 py-4 inline-block">
+            <p className="text-sm text-muted-foreground mb-1">Vagas restantes</p>
+            <p className="font-playfair text-4xl font-bold text-gold">{spotsLeft} de 10</p>
+            <p className="text-xs text-muted-foreground mt-1">Seja uma das primeiras!</p>
           </div>
 
           {/* CTA Button */}

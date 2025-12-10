@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Sparkles } from "lucide-react";
-import CountdownTimer from "./CountdownTimer";
+import SpotsCounter from "./SpotsCounter";
 
 const HeroSection = () => {
   const whatsappLink = "https://wa.me/5500000000000?text=Olá! Quero saber mais sobre o pacote completo para salões 💇‍♀️";
@@ -21,7 +21,7 @@ const HeroSection = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-card/80 backdrop-blur-sm border border-border px-4 py-2 rounded-full mb-8 animate-fade-in">
             <Sparkles className="w-4 h-4 text-gold" />
-            <span className="text-sm font-medium text-foreground">Oferta Exclusiva para Salões</span>
+            <span className="text-sm font-medium text-foreground">Oferta Exclusiva - Apenas 10 Vagas</span>
           </div>
 
           {/* Main headline */}
@@ -49,9 +49,9 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Countdown */}
+          {/* Spots Counter */}
           <div className="mb-8 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            <CountdownTimer />
+            <SpotsCounter />
           </div>
 
           {/* CTA Button */}
