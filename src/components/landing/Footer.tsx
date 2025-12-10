@@ -31,10 +31,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:contato@belezadigital.com" className="flex items-center gap-2 text-background/70 hover:text-gold transition-colors text-sm">
-                    <Mail className="w-4 h-4" />
-                    contato@belezadigital.com
-                  </a>
+                  
                 </li>
               </ul>
             </div>
