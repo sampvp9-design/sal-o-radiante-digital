@@ -1,18 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Gift, Check, Users } from "lucide-react";
-
 const FinalCTASection = () => {
   const spotsLeft = 10;
   const whatsappLink = "https://wa.me/5500000000000?text=Olá! Quero saber mais sobre o pacote completo para salões 💇‍♀️";
-
-  const bonusList = [
-    "Pack de Design para Instagram",
-    "Gestão de Redes por 2 meses",
-    "Sessão de Fotos Profissional",
-  ];
-
-  return (
-    <section className="py-20 bg-gradient-to-br from-rose-light via-background to-gold-light relative overflow-hidden">
+  const bonusList = ["Pack de Design para Instagram", "Gestão de Redes por 2 meses", "Sessão de Fotos Profissional"];
+  return <section className="py-20 bg-gradient-to-br from-rose-light via-background to-gold-light relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="absolute top-20 left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl" />
@@ -42,15 +34,13 @@ const FinalCTASection = () => {
               Inclusos gratuitamente:
             </p>
             <ul className="space-y-3">
-              {bonusList.map((bonus, index) => (
-                <li key={index} className="flex items-center gap-3 justify-center">
+              {bonusList.map((bonus, index) => <li key={index} className="flex items-center gap-3 justify-center">
                   <div className="w-6 h-6 bg-gold/20 rounded-full flex items-center justify-center">
                     <Check className="w-4 h-4 text-gold" />
                   </div>
                   <span className="text-foreground font-medium">{bonus}</span>
                   <span className="text-xs bg-gold/20 text-gold px-2 py-0.5 rounded-full">GRÁTIS</span>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -62,14 +52,10 @@ const FinalCTASection = () => {
           </div>
 
           {/* CTA Button */}
-          <Button
-            asChild
-            size="lg"
-            className="bg-gradient-to-r from-gold to-gold-light hover:from-gold-light hover:to-gold text-accent-foreground font-bold text-lg px-10 py-7 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-          >
+          <Button asChild size="lg" className="bg-gradient-to-r from-gold to-gold-light hover:from-gold-light hover:to-gold text-accent-foreground font-bold text-lg px-10 py-7 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="w-6 h-6 mr-2" />
-              Quero Minha Transformação Digital Agora
+              Quero Agora
             </a>
           </Button>
 
@@ -79,8 +65,6 @@ const FinalCTASection = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default FinalCTASection;
