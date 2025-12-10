@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Gift, Check, Users } from "lucide-react";
+import { Gift, Check, Users } from "lucide-react";
 const FinalCTASection = () => {
   const spotsLeft = 10;
   const whatsappLink = "https://wa.me/5500000000000?text=Olá! Quero saber mais sobre o pacote completo para salões 💇‍♀️";
@@ -53,9 +53,8 @@ const FinalCTASection = () => {
 
           {/* CTA Button */}
           <Button asChild size="lg" className="bg-gradient-to-r from-gold to-gold-light hover:from-gold-light hover:to-gold text-accent-foreground font-bold text-lg px-10 py-7 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-6 h-6 mr-2" />
-              Quero Agora
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">Quero Agor
+              Quero Meu Pacote Completo      
             </a>
           </Button>
 
