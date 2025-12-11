@@ -19,12 +19,6 @@ const HeroSection = () => {
       {/* Floating decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-gold rounded-full animate-float" />
-        <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-primary rounded-full animate-float" style={{
-        animationDelay: '1s'
-      }} />
-        <div className="absolute bottom-1/4 right-1/4 w-5 h-5 bg-gold-light rounded-full animate-float" style={{
-        animationDelay: '2s'
-      }} />
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
