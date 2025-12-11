@@ -1,12 +1,24 @@
 import { Button } from "@/components/ui/button";
-import { Gift, Check, Users } from "lucide-react";
+import { Check, Users } from "lucide-react";
+import salonToolsImage from "@/assets/salon-tools.jpg";
+
 const FinalCTASection = () => {
   const spotsLeft = 10;
   const whatsappLink = "https://wa.me/5500000000000?text=Olá! Quero saber mais sobre o pacote completo para salões 💇‍♀️";
   const bonusList = ["Pack de Design para Instagram", "Gestão de Redes por 2 meses", "Sessão de Fotos Profissional"];
-  return <section className="py-20 bg-gradient-to-br from-rose-light via-background to-gold-light relative overflow-hidden">
+  return <section className="py-20 relative overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img 
+          src={salonToolsImage} 
+          alt="Ferramentas profissionais de salão de beleza"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/95" />
+      </div>
+      
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-full">
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <div className="absolute top-20 left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-60 h-60 bg-gold/10 rounded-full blur-3xl" />
       </div>

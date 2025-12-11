@@ -1,10 +1,11 @@
 import { Award, Shield, Heart, Sparkles } from "lucide-react";
+import stylistImage from "@/assets/stylist-working.jpg";
 
 const AuthoritySection = () => {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 px-4 py-2 rounded-full mb-6">
               <Award className="w-5 h-5 text-gold" />
@@ -16,8 +17,17 @@ const AuthoritySection = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Left side - Text content */}
+          <div className="grid lg:grid-cols-3 gap-8 items-center">
+            {/* Left side - Image */}
+            <div className="hidden lg:block">
+              <img 
+                src={stylistImage} 
+                alt="Cabeleireira profissional trabalhando em salão de beleza"
+                className="w-full h-80 object-cover rounded-2xl shadow-xl"
+              />
+            </div>
+            
+            {/* Middle - Text content */}
             <div className="space-y-6 opacity-0 animate-fade-in-left">
               <p className="text-lg text-foreground leading-relaxed">
                 Somos especialistas em <span className="font-semibold text-primary">marketing digital para salões de beleza</span>. 
