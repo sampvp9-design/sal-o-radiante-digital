@@ -19,7 +19,7 @@ const Footer = () => {
               <h4 className="font-semibold mb-4">Contato</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-background/70 hover:text-gold transition-colors text-sm">
+                  <a href="https://wa.me/5561981015440" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-background/70 hover:text-gold transition-colors text-sm">
                     <MessageCircle className="w-4 h-4" />
                     WhatsApp
                   </a>
