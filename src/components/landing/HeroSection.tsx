@@ -1,13 +1,23 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 import SpotsCounter from "./SpotsCounter";
+import heroSalonImage from "@/assets/hero-salon.jpg";
+
 const HeroSection = () => {
   const whatsappLink = "https://wa.me/5500000000000?text=Olá! Quero saber mais sobre o pacote completo para salões 💇‍♀️";
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-rose">
-      {/* Background decorations */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/20 rounded-full blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gold/20 rounded-full blur-3xl" />
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img 
+          src={heroSalonImage} 
+          alt="Salão de beleza moderno com decoração rosa e dourada" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+      </div>
+      
+      {/* Floating decorations */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-gold rounded-full animate-float" />
         <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-primary rounded-full animate-float" style={{
         animationDelay: '1s'
