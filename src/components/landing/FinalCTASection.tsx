@@ -4,7 +4,7 @@ import salonToolsImage from "@/assets/salon-tools.jpg";
 
 const FinalCTASection = () => {
   const spotsLeft = 10;
-  const whatsappLink = "https://wa.me/5500000000000?text=Olá! Quero saber mais sobre o pacote completo para salões 💇‍♀️";
+  const whatsappLink = "https://wa.me/5561981015440?text=Olá! Quero o pacote completo para salões 💇‍♀️";
   const bonusList = ["Pack de Design para Instagram", "Gestão de Redes por 2 meses", "Sessão de Fotos Profissional"];
   return <section className="py-20 relative overflow-hidden">
       {/* Background image */}

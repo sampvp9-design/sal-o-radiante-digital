@@ -4,7 +4,7 @@ import SpotsCounter from "./SpotsCounter";
 import heroSalonImage from "@/assets/hero-salon.jpg";
 
 const HeroSection = () => {
-  const whatsappLink = "https://wa.me/5500000000000?text=Olá! Quero saber mais sobre o pacote completo para salões 💇‍♀️";
+  const whatsappLink = "https://wa.me/5561981015440?text=Olá! Quero o pacote completo para salões 💇‍♀️";
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
