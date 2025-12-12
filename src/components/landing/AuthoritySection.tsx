@@ -1,11 +1,14 @@
 import { Award, Shield, Heart, Sparkles } from "lucide-react";
 import stylistImage from "@/assets/stylist-working.jpg";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const AuthoritySection = () => {
+  const { ref, isVisible } = useScrollAnimation<HTMLElement>();
+  
   return (
-    <section className="py-20 bg-background">
+    <section ref={ref} className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
+        <div className={`max-w-5xl mx-auto transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 px-4 py-2 rounded-full mb-6">
               <Award className="w-5 h-5 text-gold" />
@@ -28,7 +31,7 @@ const AuthoritySection = () => {
             </div>
             
             {/* Middle - Text content */}
-            <div className="space-y-6 opacity-0 animate-fade-in-left">
+            <div className={`space-y-6 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
               <p className="text-lg text-foreground leading-relaxed">
                 Somos especialistas em <span className="font-semibold text-primary">marketing digital para salões de beleza</span>. 
                 Entendemos o mercado, conhecemos o público e sabemos exatamente o que funciona para fazer seu negócio crescer.
@@ -53,7 +56,7 @@ const AuthoritySection = () => {
             </div>
 
             {/* Right side - Trust badges */}
-            <div className="space-y-4 opacity-0 animate-fade-in-right" style={{ animationDelay: '0.2s' }}>
+            <div className={`space-y-4 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
               {/* Specialist badge */}
               <div className="bg-card border border-border rounded-2xl p-6 flex items-start gap-4">
                 <div className="w-14 h-14 bg-gold/20 rounded-xl flex items-center justify-center flex-shrink-0">

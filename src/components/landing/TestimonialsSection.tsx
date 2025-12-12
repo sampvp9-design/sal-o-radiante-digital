@@ -1,4 +1,5 @@
 import { Star, Quote } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const testimonials = [
   {
@@ -25,8 +26,10 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => {
+  const { ref, isVisible } = useScrollAnimation<HTMLElement>();
+  
   return (
-    <section className="py-20 bg-background">
+    <section ref={ref} className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -41,8 +44,8 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-card border border-border rounded-2xl p-8 hover:shadow-xl transition-all duration-300 relative opacity-0 animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`bg-card border border-border rounded-2xl p-8 hover:shadow-xl transition-all duration-500 relative ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
               <Quote className="absolute top-6 right-6 w-8 h-8 text-rose-light" />
               
@@ -76,7 +79,7 @@ const TestimonialsSection = () => {
           </h3>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-card border border-border rounded-2xl p-6 opacity-0 animate-fade-in-left" style={{ animationDelay: '0.3s' }}>
+            <div className={`bg-card border border-border rounded-2xl p-6 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
               <div className="flex items-center justify-between mb-4">
                 <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">Antes</span>
                 <span className="text-xs text-muted-foreground">127 seguidores</span>
@@ -95,7 +98,7 @@ const TestimonialsSection = () => {
               </div>
             </div>
 
-            <div className="bg-card border-2 border-gold/30 rounded-2xl p-6 opacity-0 animate-fade-in-right" style={{ animationDelay: '0.4s' }}>
+            <div className={`bg-card border-2 border-gold/30 rounded-2xl p-6 transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
               <div className="flex items-center justify-between mb-4">
                 <span className="text-sm font-semibold text-gold uppercase tracking-wide">Depois</span>
                 <span className="text-xs text-gold">2.400+ seguidores</span>

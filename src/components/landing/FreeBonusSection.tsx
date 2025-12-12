@@ -1,4 +1,5 @@
 import { Gift, Palette, Users, Camera, Check } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const bonuses = [
   {
@@ -25,8 +26,10 @@ const bonuses = [
 ];
 
 const FreeBonusSection = () => {
+  const { ref, isVisible } = useScrollAnimation<HTMLElement>();
+  
   return (
-    <section className="py-20 bg-gradient-rose relative overflow-hidden">
+    <section ref={ref} className="py-20 bg-gradient-rose relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-10 left-10 w-20 h-20 border-2 border-gold/20 rounded-full" />
       <div className="absolute bottom-10 right-10 w-32 h-32 border-2 border-primary/20 rounded-full" />
@@ -50,8 +53,8 @@ const FreeBonusSection = () => {
           {bonuses.map((bonus, index) => (
             <div
               key={index}
-              className="relative bg-card border-2 border-gold/30 rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group opacity-0 animate-fade-in"
-              style={{ animationDelay: `${index * 0.15}s` }}
+              className={`relative bg-card border-2 border-gold/30 rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              style={{ transitionDelay: `${index * 150}ms` }}
             >
               {/* GRÁTIS badge */}
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
