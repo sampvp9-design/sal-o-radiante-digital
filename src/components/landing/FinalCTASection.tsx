@@ -2,12 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Check, Users } from "lucide-react";
 import salonToolsImage from "@/assets/salon-tools.jpg";
 import DemoPreviewPopup from "./DemoPreviewPopup";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const FinalCTASection = () => {
+  const { ref, isVisible } = useScrollAnimation<HTMLElement>();
   const spotsLeft = 10;
   const whatsappLink = "https://wa.me/5561981015440?text=Olá! Quero o pacote completo para salões 💇‍♀️";
   const bonusList = ["Pack de Design para Instagram", "Gestão de Redes por 2 meses", "Sessão de Fotos Profissional"];
-  return <section className="py-20 relative overflow-hidden">
+  return <section ref={ref} className="py-20 relative overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
         <img 
@@ -25,7 +27,7 @@ const FinalCTASection = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className={`max-w-3xl mx-auto text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="inline-flex items-center gap-2 bg-gold/20 border border-gold/40 px-5 py-2 rounded-full mb-8 animate-pulse-soft">
             <Users className="w-5 h-5 text-gold" />
             <span className="text-gold font-semibold">Apenas {spotsLeft} vagas disponíveis!</span>

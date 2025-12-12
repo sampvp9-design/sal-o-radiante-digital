@@ -1,4 +1,5 @@
 import { Globe, Palette, Users, Camera } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const benefits = [
   {
@@ -32,8 +33,10 @@ const benefits = [
 ];
 
 const BenefitsSection = () => {
+  const { ref, isVisible } = useScrollAnimation<HTMLElement>();
+  
   return (
-    <section className="py-20 bg-background">
+    <section ref={ref} className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -48,8 +51,8 @@ const BenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="group relative bg-card border border-border rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 opacity-0 animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`group relative bg-card border border-border rounded-2xl p-6 hover:shadow-xl transition-all duration-500 hover:-translate-y-1 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
               {benefit.highlight && (
                 <div className="absolute -top-3 -right-3">
