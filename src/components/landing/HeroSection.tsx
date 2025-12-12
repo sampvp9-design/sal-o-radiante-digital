@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 import SpotsCounter from "./SpotsCounter";
 import heroSalonImage from "@/assets/hero-salon.jpg";
+import DemoPreviewPopup from "./DemoPreviewPopup";
 
 const HeroSection = () => {
   const whatsappLink = "https://wa.me/5561981015440?text=Olá! Quero o pacote completo para salões 💇‍♀️";
@@ -63,20 +64,20 @@ const HeroSection = () => {
             <SpotsCounter />
           </div>
 
-          {/* CTA Button */}
-          <div className="animate-fade-in" style={{
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{
           animationDelay: '0.5s'
         }}>
             <Button asChild size="lg" className="bg-gradient-to-r from-primary to-rose-dark hover:from-rose-dark hover:to-primary text-primary-foreground font-semibold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                
                 Quero Meu Pacote Completo
               </a>
             </Button>
-            <p className="text-sm text-muted-foreground mt-4">
-              💬 Atendimento direto pelo WhatsApp
-            </p>
+            <DemoPreviewPopup />
           </div>
+          <p className="text-sm text-muted-foreground mt-4">
+            💬 Atendimento direto pelo WhatsApp
+          </p>
         </div>
       </div>
 
